@@ -5,58 +5,58 @@
 **We rebuild and reimagine legacy systems for the AI world.**
 
 Winsen Labs builds the AI for financial services, manufacturing, logistics and healthcare.
-We go and find what AI has made newly possible, then work with teams to build it for real.
+We start with your problems, not our product, then work with teams to build it for real.
 
-[winsenlabs.com](https://winsenlabs.com) · [winsen.ai](https://winsen.ai) · [platos.dev](https://platos.dev)
+[winsenlabs.com](https://winsenlabs.com) · [winsen.one](https://winsen.one) · [winsenrho.com](https://winsenrho.com)
 
 </div>
 
 ---
 
-## What we do
+## What we build
 
-Most AI in the enterprise sits beside the work rather than inside it. It operates on a context window, not on a model of the company, so nobody can hand it anything that matters. We build the other thing: systems that hold enough real context to be trusted with real work, deployed where the data already lives, with a named human approving every output.
+We take on a small number of engagements a year with teams in regulated and operationally heavy industries, and we build products out of what we learn there. Two of them we sell. The rest we give away.
 
-The work runs in two directions. We take on a small number of engagements a year with teams in regulated and operationally heavy industries, and we build products out of what we learn there.
+### Products for financial services
 
-**[Winsen One](https://winsen.ai)** — a command centre for AI employees that work alongside your team. Credit file review, reconciliation, alert disposition, quality records, freight audit. They read, check and draft; a person on your team approves. Isolated deployments, and your data stays yours.
-
-**[Walle](https://walle.winsenlabs.dev)** — your AI helps you think, write and decide, and then every consequence still lands on you: contacts to update, follow-ups to chase, records to fix. Walle sits in your Slack with your tools connected and takes that part. It drafts before it sends and asks before it acts.
+| | |
+|---|---|
+| **[Winsen One](https://winsen.one)**<br>AI employees for financial services. | Role-specific AI employees for operational work: credit file review, reconciliation, alert disposition. Each one owns a defined queue and works the full volume, not a sample. Nothing it produces counts until a named person signs it, and every action is logged and replayable. |
+| **[Winsen Rho](https://winsenrho.com)**<br>Effortless accountability for every AI action. | Measure, monitor and evaluate every AI agent a bank runs, whether built in-house or by a vendor. Rho checks every decision against what actually happened in the bank's own systems, and turns that record into the evidence regulators ask for and the numbers the business needs. |
 
 ---
 
-## Open source
+## Built in the open
 
-### [Platos](https://github.com/winsenlabs/platos) — the agent runtime
+### [OCSO](https://github.com/winsenlabs/ocso): Open Customer Success Orchestration
 
-[![Apache 2.0](https://img.shields.io/github/license/winsenlabs/platos?style=flat-square&color=8B6B3D)](https://github.com/winsenlabs/platos/blob/main/LICENSE)
-[![Stars](https://img.shields.io/github/stars/winsenlabs/platos?style=flat-square&color=8B6B3D)](https://github.com/winsenlabs/platos/stargazers)
-[![Docs](https://img.shields.io/badge/docs-platos.dev-8B6B3D?style=flat-square)](https://platos.dev/docs)
+[![Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-5F7A1A?style=flat-square)](https://github.com/winsenlabs/ocso/blob/main/LICENSE)
+[![Status](https://img.shields.io/badge/status-pre--1.0-5F7A1A?style=flat-square)](https://github.com/winsenlabs/ocso)
+[![Site](https://img.shields.io/badge/site-ocso.winsenlabs.dev-5F7A1A?style=flat-square)](https://ocso.winsenlabs.dev)
 
-Platos is the piece of our own stack we think should not be anybody's competitive advantage, so we gave it away. It is a complete agent runtime: the open-source replacement for hosted services like Claude Managed Agents and OpenAI Assistants.
+Customer success is scattered across channels, tools and teams, with AI bolted on at the edges. OCSO is one open layer where AI agents and people serve customers on every channel, under controls you can audit.
 
-Build, ship and operate AI agents on infrastructure you own.
-
-- **Streaming chat runtime** with prompt caching, tool-calling, structured outputs, sub-agents and multi-turn compaction.
-- **Durable execution** on [trigger.dev](https://trigger.dev). Every long-running tool call, scheduled job and batch operation is a resumable run with retries, queues and traces.
-- **Universal MCP gateway** federating entity-pushed, native, skill and control-plane tools behind one endpoint, with OAuth scoping and per-tool ACL.
-- **Memory, skills and observability** wired in at the runtime layer: vector store, knowledge graph, manifest-driven skills, OpenTelemetry traces, ClickHouse cost ledger.
-- **Multi-tenant by default.** Every row is keyed by organisation, project and environment, so the same primitives fit a SaaS product or an internal platform.
-- **BYOK across providers.** Anthropic, OpenAI, Google, Vertex AI, OpenRouter. Keys are encrypted in your database and never leave it.
-
-You own the infrastructure, the data and the model choice. No seat licence, no telemetry-based billing, no lock-in.
+- **Channels:** WhatsApp, web chat, Slack and Microsoft Teams behind one conversation model.
+- **Human handoff both ways**, with explicit control states and the AI summary carried across.
+- **Tools over MCP** from your own systems, with per-agent grants and confirmation for sensitive actions.
+- **Maker-checker on every configuration change**, and a separate, hash-chained, signed audit store.
+- **Six model providers**, self-hosted with Docker Compose or Terraform for AWS.
 
 ```bash
-git clone https://github.com/winsenlabs/platos.git
-cd platos
-cp .env.example .env          # set ANTHROPIC_API_KEY, or any other provider
-docker compose -f docker-compose.platos.yml up -d
-open http://localhost:3030
+git clone https://github.com/winsenlabs/ocso.git && cd ocso
+cp .env.example .env
+OCSO_DEMO_SEED=true docker compose --profile demo up -d --build
 ```
 
-Chat-ready in about two minutes. Apache 2.0.
+[Website](https://ocso.winsenlabs.dev) · [Docs](https://github.com/winsenlabs/ocso/tree/main/docs) · [Roadmap](https://github.com/winsenlabs/ocso/blob/main/ROADMAP.md)
 
-[Quickstart](https://platos.dev/guides/quickstart) · [Docs](https://platos.dev/docs) · [Architecture](https://platos.dev/docs/architecture) · [Roadmap](https://platos.dev/roadmap) · [Discord](https://discord.gg/7zxegt73zr)
+### [OVO](https://github.com/winsenlabs/ovo): Open Voice Orchestrator
+
+Build, run and observe voice agents on your own infrastructure. Everything is a plugin: the conversation engine, speech, telephony, tools and the console. OVO is what we are building now. The repository holds the product requirements, architecture and engineering plan, and the code is being written in the open. Research findings and architecture feedback are welcome.
+
+### [Platos](https://github.com/winsenlabs/platos): the agent runtime, v2 in progress
+
+Our model-agnostic, self-hostable agent runtime. We are rebuilding it as **Platos v2**, taking what we learned running it in production. The current version stays available while the new one takes shape. [platos.dev](https://platos.dev)
 
 ### [Rocketman](https://github.com/winsenlabs/rocketman)
 
@@ -68,9 +68,9 @@ Project management for the age of AI coding agents. A hub that lives inside your
 
 We take on a small number of engagements a year, usually with teams who have a hard problem in a regulated or operationally heavy environment and who want to own what gets built.
 
-**[winsenlabs.com](https://winsenlabs.com)** · **hello@winsenlabs.com**
+**[winsenlabs.com](https://winsenlabs.com)** · **hello@winsenlabs.com** · [Discord](https://discord.gg/7zxegt73zr)
 
-Contributions to Platos are welcome. Start with the [issues](https://github.com/winsenlabs/platos/issues), or come and say hello in [Discord](https://discord.gg/7zxegt73zr).
+Contributions are welcome on any of the open repositories. Start with their issues.
 
 <div align="center">
 
