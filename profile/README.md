@@ -2,31 +2,43 @@
 
 # Winsen Labs
 
-**We rebuild and reimagine legacy systems for the AI world.**
+**We help companies where AI matters most.**
 
-Winsen Labs builds the AI for financial services, manufacturing, logistics and healthcare.
-We start with your problems, not our product, then work with teams to build it for real.
+We know how to build AI and how to govern it.
+We advise companies in financial services, healthcare, government, manufacturing and logistics
+on what they can do with AI, and we build it with them.
 
-[winsenlabs.com](https://winsenlabs.com) · [winsen.one](https://winsen.one) · [winsenrho.com](https://winsenrho.com)
+[winsenlabs.com](https://winsenlabs.com) · [winsenrho.com](https://winsenrho.com) · [ocso.winsenlabs.dev](https://ocso.winsenlabs.dev)
 
 </div>
 
 ---
 
-## What we build
-
-We take on a small number of engagements a year with teams in regulated and operationally heavy industries, and we build products out of what we learn there. Two of them we sell. The rest we give away.
-
-### Products for financial services
+## How we work
 
 | | |
 |---|---|
-| **[Winsen One](https://winsen.one)**<br>AI employees for financial services. | Role-specific AI employees for operational work: credit file review, reconciliation, alert disposition. Each one owns a defined queue and works the full volume, not a sample. Nothing it produces counts until a named person signs it, and every action is logged and replayable. |
-| **[Winsen Rho](https://winsenrho.com)**<br>Effortless accountability for every AI action. | Measure, monitor and evaluate every AI agent a bank runs, whether built in-house or by a vendor. Rho checks every decision against what actually happened in the bank's own systems, and turns that record into the evidence regulators ask for and the numbers the business needs. |
+| **Strategic partner**<br>We advise, your team builds. | We advise leadership and internal teams on which use cases to back, which models and vendors to use, and what the regulator will ask for. |
+| **Deployed AI team**<br>Our engineers, inside your team. | We place engineers we have hired and trained inside your organisation. They build in your systems and follow your approval rules. |
+| **Governance review**<br>We review the AI you already run. | We list what is running and who owns it, check what records it keeps, and give you a written report of what to fix first. |
+
+Every team has four points of view on it: engineering, audit, risk and legal.
+
+[More on how we work](https://winsenlabs.com/consulting)
 
 ---
 
-## Built in the open
+## Winsen Rho
+
+**Effortless accountability for every AI action.** [winsenrho.com](https://winsenrho.com)
+
+Rho is our AI governance platform for banks, financial services and insurance. It keeps a record of every AI agent an institution runs and every decision each one makes, whether the agent was built in-house or by a vendor, and checks those decisions against what happened next in the institution's own systems. When a regulator asks, the evidence is already there.
+
+Rho is proprietary. It is our flagship product.
+
+---
+
+## In the open
 
 ### [OCSO](https://github.com/winsenlabs/ocso): Open Customer Success Orchestration
 
@@ -34,12 +46,12 @@ We take on a small number of engagements a year with teams in regulated and oper
 [![Status](https://img.shields.io/badge/status-pre--1.0-5F7A1A?style=flat-square)](https://github.com/winsenlabs/ocso)
 [![Site](https://img.shields.io/badge/site-ocso.winsenlabs.dev-5F7A1A?style=flat-square)](https://ocso.winsenlabs.dev)
 
-Customer success is scattered across channels, tools and teams, with AI bolted on at the edges. OCSO is one open layer where AI agents and people serve customers on every channel, under controls you can audit.
+Customer service is usually spread over several channels, tools and teams. OCSO puts it in one self-hosted layer, where AI agents and your own people answer customers together.
 
 - **Channels:** WhatsApp, web chat, Slack and Microsoft Teams behind one conversation model.
-- **Human handoff both ways**, with explicit control states and the AI summary carried across.
-- **Tools over MCP** from your own systems, with per-agent grants and confirmation for sensitive actions.
-- **Maker-checker on every configuration change**, and a separate, hash-chained, signed audit store.
+- **Handoff both ways** between agents and people, with the AI's summary carried across.
+- **Tools from your own systems** over MCP, with per-agent grants and confirmation for sensitive actions.
+- **A second person approves every configuration change**, and everything is kept in a signed, tamper-evident audit store.
 - **Six model providers**, self-hosted with Docker Compose or Terraform for AWS.
 
 ```bash
@@ -52,28 +64,28 @@ OCSO_DEMO_SEED=true docker compose --profile demo up -d --build
 
 ### [OVO](https://github.com/winsenlabs/ovo): Open Voice Orchestrator
 
-Build, run and observe voice agents on your own infrastructure. Everything is a plugin: the conversation engine, speech, telephony, tools and the console. OVO is what we are building now. The repository holds the product requirements, architecture and engineering plan, and the code is being written in the open. Research findings and architecture feedback are welcome.
+We think a company should own its voice channel. OVO lets you build, run and monitor voice agents on your own servers, so the calls, recordings and transcripts stay with you. Every part is a plugin you can swap: the conversation engine, speech, telephony, tools and the console.
 
-### [Platos](https://github.com/winsenlabs/platos): the agent runtime, v2 in progress
+The repository has the runnable applications, tests, documentation and deployment profiles. OVO is in use at a few organisations today.
 
-Our model-agnostic, self-hostable agent runtime. We are rebuilding it as **Platos v2**, taking what we learned running it in production. The current version stays available while the new one takes shape. [platos.dev](https://platos.dev)
-
-### [Rocketman](https://github.com/winsenlabs/rocketman)
-
-Project management for the age of AI coding agents. A hub that lives inside your repo as one offline file, plus a skill stack that walks an idea from spec to shipped, so an agent picks up durable project context instead of starting cold every session. MIT.
+[Docs](https://github.com/winsenlabs/ovo/tree/main/docs)
 
 ---
 
-## Working with us
+## Also from Winsen Labs
 
-We take on a small number of engagements a year, usually with teams who have a hard problem in a regulated or operationally heavy environment and who want to own what gets built.
+**[Ahada Health](https://ahadahealth.com)** is coming soon. After a clinic visit, it follows up on each step the doctor set with the patient on WhatsApp, in the clinic's own name.
 
-**[winsenlabs.com](https://winsenlabs.com)** · **hello@winsenlabs.com** · [Discord](https://discord.gg/7zxegt73zr)
+---
 
-Contributions are welcome on any of the open repositories. Start with their issues.
+## Get in touch
+
+**[Talk to us](https://winsenlabs.com/contact)** · hello@winsenlabs.com · [Careers](https://winsenlabs.com/careers) · [Discord](https://discord.gg/7zxegt73zr)
+
+Contributions are welcome on the open repositories. Start with their issues.
 
 <div align="center">
 
-<sub>Made in Chennai. Work is better with Winsen.</sub>
+<sub>Mumbai and Chennai. Work is better with Winsen.</sub>
 
 </div>
